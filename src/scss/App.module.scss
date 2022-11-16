@@ -3,15 +3,18 @@
   height: 500px;
   display: flex;
   justify-content: center;
+  flex-direction: column;
+  position: relative;
   align-items: center;
-  background-image: url('./assets/img/sity.png');
+
+  background-image: url('../assets/img/sity.png');
 
   .send__form {
     width: 430px;
     height: 40px;
     background-color: white;
     display: flex;
-    opacity: 0.7;
+    opacity: 0.8;
     border-radius: 2px;
     justify-content: center;
     align-items: center;
@@ -23,23 +26,31 @@
       width: 300px;
       height: 30px;
       font-size: 15px;
-      border: 1px solid whitesmoke;
-      opacity: 0.8;
+      border: 1px solid white;
+      opacity: 0.9;
       outline: none;
       margin-left: 15px;
       transform: skew(40deg);
+    }
+    .is__valid {
+      border: 1px solid red;
     }
 
     button {
       margin-left: 15px;
       height: 39px;
       width: 108px;
-      background: rgba(254, 0, 0, 1);
+      background: rgba(254, 0, 0);
       opacity: 0.8;
       color: white;
       border: 1px solid whitesmoke;
       border-radius: 2px;
       cursor: pointer;
+      transition: background 0.3s ease-in-out;
+
+      &:disabled {
+        background: gray;
+      }
 
       div {
         transform: skew(40deg);
@@ -73,5 +84,12 @@
         }
       }
     }
+  }
+
+  .valid {
+    height: 20px;
+    opacity: 0.8;
+    background-color: white;
+    color: red;
   }
 }
